@@ -10,9 +10,9 @@ This is a basic implementation of the [Battlesnake API](https://docs.battlesnake
 
 ## Prerequisites
 
-* [Battlesnake Account](https://play.battlesnake.com) <!-- done >
-* [Repl.it Account](https://repl.it) <!-- done >
-* [GitHub Account](https://github.com) (Optional) <!-- done >
+* [Battlesnake Account](https://play.battlesnake.com) <!-- done !-->
+* [Repl.it Account](https://repl.it) <!-- done !-->
+* [GitHub Account](https://github.com) (Optional) <!-- done !-->
 
 ## Running Your Battlesnake on [Repl.it](https://repl.it)
 
