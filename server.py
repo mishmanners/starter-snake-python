@@ -8,6 +8,7 @@ This is a simple Battlesnake server written in Python.
 For instructions see https://github.com/BattlesnakeOfficial/starter-snake-python/README.md
 """
 
+# add all the things
 
 class Battlesnake(object):
     @cherrypy.expose
