@@ -44,13 +44,7 @@ def avoid_snakes(future_head, snake_bodies):
     Return True of the proposed move avoids running into any list of snakes,
     False if the next move exists in a snake body square.
 
-    Recommend taking the default data from the board snakes as per the battlesnake
-    API. Note that the list of board snakes includes yourself!
-
-    TODO - this is basic, may want to add in a check to see if any heads are
-    about to eat food, and may extend by a square! Does the tail grow first,
-    or does the head grow? Find out what happens in the game and see if we need
-    to check for if a snake suddenly grows.
+    # snake eats food, then grows head by 1 square the following move
 
     TODO - what about snake tails leaving in the next move? A tail may be a
     safe place to move into (assuming no food as in above scenario). In which
@@ -88,6 +82,7 @@ def validate_move(your_body, snakes, next_move):
 
     safe_wall = avoid_wall(future_head)
     safe_body = avoid_snakes(future_head, snakes)
+    # TODO food knowledge
 
     print(f"future_head {future_head}: safe_wall {safe_wall}, safe_body {safe_body}")
     is_safe = safe_wall and safe_body

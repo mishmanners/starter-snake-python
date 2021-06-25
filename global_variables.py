@@ -19,3 +19,4 @@ MOVE_LOOKUP = {"left": -1, "right": 1, "up": 1, "down": -1}
 
 # Keep track on if the game is running or not
 GAME_ON = False
+
