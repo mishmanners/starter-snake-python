@@ -67,12 +67,12 @@ class Battlesnake(object):
         your_health = data["you"]["health"]
         your_body = data["you"]["body"]
         snakes = data["board"]["snakes"]
-        foods = data["board"]["food"]
+        # foods = data["board"]["food"]
         print(f"Data in move is: {data}")
 
         while global_variables.GAME_ON and your_health > 0:
             move = strategy.choose_move_chaos(data)
-            safe = strategy.validate_move(your_body, snakes, foods, move)
+            safe = strategy.validate_move(your_body, snakes, move)
             if safe:
                 break
 
