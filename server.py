@@ -1,7 +1,9 @@
 import os
-import random
 
 import cherrypy
+
+import global_variables
+import strategy
 
 """
 This is a simple Battlesnake server written in Python.
@@ -30,7 +32,24 @@ class Battlesnake(object):
     def start(self):
         # This function is called everytime your snake is entered into a game.
         # cherrypy.request.json contains information about the game that's about to be played.
+        
+        """
+        Treat this as game initialization - should only set global_variables
+        here - could be dangerous elsewhere! Don't want to confuse myself.
+
+        { "game":  { "id":  "unique-game-id", "timeout" : 500 }
+          "turn": 123
+          "board": "height": 1, "width", 1, "food": [ ], "hazards": [ ], "snakes" : [ ],
+          "you": { }
+        """
+        
         data = cherrypy.request.json
+
+        print(f"~~  START NEW GAME ~~~{data['game']['id']}")
+        # maximum x and y coordinates are one less than the size (zero index)
+        global_variables.BOARD_MAXIMUM_X = data["board"]["width"] - 1
+        global_variables.BOARD_MAXIMUM_Y = data["board"]["height"] - 1
+        global_variables.GAME_ON = True
 
         print("START")
         return "ok"
@@ -44,12 +63,20 @@ class Battlesnake(object):
         # TODO: Use the information in cherrypy.request.json to decide your next move.
         data = cherrypy.request.json
 
-        # Choose a random direction to move in
-        possible_moves = ["up", "down", "left", "right"]
-        move = random.choice(possible_moves)
+        # Enter data
+        your_health = data["you"]["health"]
+        your_body = data["you"]["body"]
+        snakes = data["board"]["snakes"]
+        print(f"Data in move is: {data}")
 
-        print(f"MOVE: {move}")
-        return {"move": move}
+        while global_variables.GAME_ON and your_health > 0:
+            move = strategy.choose_move_chaos(data)
+            safe = strategy.validate_move(your_body, snakes, move)
+            if safe:
+                break
+
+        print(f"Huzzah! I move : {move}")
+        return {"move": move }
 
     @cherrypy.expose
     @cherrypy.tools.json_in()
@@ -58,7 +85,9 @@ class Battlesnake(object):
         # It's purely for informational purposes, you don't have to make any decisions here.
         data = cherrypy.request.json
 
-        print("END")
+        global_variables.GAME_ON = False
+
+        print("Yay we finished the game! Did we win?")
         return "ok"
 
 
