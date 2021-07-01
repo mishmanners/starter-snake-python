@@ -116,8 +116,7 @@ def choose_move_food(data):
     current_head_y = data["you"]["head"]["y"]
     print(f"Current head is at {current_head_x}, {current_head_y}")
     print(f"Food squares are as follows: {food_squares}")
-    return "right"
-    
+
 
 
 
