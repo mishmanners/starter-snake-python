@@ -118,7 +118,7 @@ def choose_move_food(data):
     # print(f"Current head is at {current_head_x}, {current_head_y}")
     # print(f"Food squares are as follows: {food_squares}")
 
-    if current_health < 50:
+    if int(current_health) < 50:
         # TODO - this is a good place to implement knowledge of food, as it will help
         # determine the next move.
         # Find the closest food square
@@ -126,23 +126,18 @@ def choose_move_food(data):
         closest_food_y = food_squares[0]["y"]
 
         if closest_food_x < current_head_x:
-            move = "right"
-        elif closest_food_x > current_head_x:
             move = "left"
+        elif closest_food_x > current_head_x:
+            move = "right"
         elif closest_food_y < current_head_y:
-            move = "up"
-        elif closest_food_y > current_head_y:
             move = "down"
-        return move
+        elif closest_food_y > current_head_y:
+            move = "up"
+        print("I'm hungry")
+        return move    
 
     else:
         # TODO - this is a good place to implement knowledge of food, as it will help
         # determine the next move.
         # If no food is found, just move randomly
         return choose_move_chaos(data)
-
-
-
-
-
-
