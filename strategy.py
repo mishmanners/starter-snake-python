@@ -132,5 +132,5 @@ def choose_move_food(data):
         return move    
 
     else:
-        # If no food is found, go back to validate move logic.
-        return validate_move(data)
+        # If no food is found, move randomly.
+        return choose_move_chaos(data)
