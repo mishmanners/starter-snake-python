@@ -6,6 +6,7 @@ import random
 
 import global_variables as var
 
+
 def _predict_future_position(current_head, next_move):
     """
     Given the current snake head position, and a proposed move,
@@ -106,9 +107,6 @@ def choose_move_food(data):
     The food strategy relies on choosing the move that will lead to the closest food
     in the next turn.
     """
-    # TODO - this is a good place to implement knowledge of food, as it will help
-    # determine the next move.
-
     # Get the list of food squares
     food_squares = data["board"]["food"]
     # Get the current snake head position
