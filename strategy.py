@@ -82,8 +82,7 @@ def validate_move(your_body, snakes, next_move):
 
     safe_wall = avoid_wall(future_head)
     safe_body = avoid_snakes(future_head, snakes)
-    # TODO food knowledge
-
+    
     print(f"future_head {future_head}: safe_wall {safe_wall}, safe_body {safe_body}")
     is_safe = safe_wall and safe_body
 
@@ -116,7 +115,7 @@ def choose_move_food(data):
     # print(f"Current head is at {current_head_x}, {current_head_y}")
     # print(f"Food squares are as follows: {food_squares}")
 
-    if int(current_health) < 50:
+    if int(current_health) < 30:
         # Find the closest food square
         closest_food_x = food_squares[0]["x"]
         closest_food_y = food_squares[0]["y"]
