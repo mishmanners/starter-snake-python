@@ -135,5 +135,20 @@ def choose_move_food(data):
         # If no food is found, move randomly.
         return choose_move_chaos(data)
 
-def choose_move_safe(data):
+def avoid_hazards(future_head, data):
+    """
+    Return True if the proposed future_head avoids a hazard, False if it means
+    you will hit a hazard.
+    """
+    # Get the list of hazards
+    hazards = data["board"]["hazard"]
+    # Get the current snake head position
+    current_head_x = data["you"]["head"]["x"]
+    current_head_y = data["you"]["head"]["y"]
+
+    for snake in hazards:
+        if future_head in hazards:
+            return False
+    return True
+
 
