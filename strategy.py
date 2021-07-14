@@ -1,5 +1,5 @@
 """
-Home to hold my various experimental strategy code and appraoches. To be
+Home to hold my various experimental strategy code and approaches. To be
 used by the server.py code
 """
 import random
@@ -41,7 +41,7 @@ def avoid_wall(future_head):
 
 def avoid_snakes(future_head, snake_bodies):
     """
-    Return True of the proposed move avoids running into any list of snakes,
+    Return True if the proposed move avoids running into any list of snakes,
     False if the next move exists in a snake body square.
 
     # snake eats food, then grows head by 1 square the following move
@@ -134,3 +134,6 @@ def choose_move_food(data):
     else:
         # If no food is found, move randomly.
         return choose_move_chaos(data)
+
+def choose_move_safe(data):
+
