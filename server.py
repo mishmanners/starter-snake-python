@@ -72,7 +72,8 @@ class Battlesnake(object):
 
         while global_variables.GAME_ON and your_health > 0:
             move = strategy.choose_move_food(data)
-            safe = strategy.validate_move(your_body, snakes, move)
+            no_hazard = strategy.avoid_hazards(data)
+            safe = strategy.validate_move(your_body, snakes, move, no_hazard)
             if safe:
                 break
 
