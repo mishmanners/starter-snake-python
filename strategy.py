@@ -139,16 +139,20 @@ def avoid_hazards(future_head, data):
     """
     Return True if the proposed future_head avoids a hazard, False if it means
     you will hit a hazard.
+    
     """
+    result = True
+
     # Get the list of hazards
     hazards = data["board"]["hazard"]
-    # Get the current snake head position
-    current_head_x = data["you"]["head"]["x"]
-    current_head_y = data["you"]["head"]["y"]
 
-    for snake in hazards:
-        if future_head in hazards:
-            return False
+    # If the future head is in a hazard square, return False to mean you'll hit a hazard next turn.
+    if future_head in hazards:
+        return False
     return True
+    return move
+
+
+    
 
 
