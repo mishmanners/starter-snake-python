@@ -68,6 +68,22 @@ def avoid_snakes(future_head, snake_bodies):
             return False
     return True
 
+def avoid_hazards(future_head, data):
+    """
+    Return True if the proposed future_head avoids any of the hazards, False if it means
+    you will hit a hazard.
+    """
+
+    result = True
+
+    # Get the list of hazards
+    hazards = data["hazards"]
+    
+    # If the future head is in a hazard, return False to mean you'll hit a hazard next turn.
+    if future_head in hazards:
+        result = False
+    return True
+
 def validate_move(your_body, snakes, next_move):
     """
     Basic set of logical checks that only prevent disaster. This function is not
