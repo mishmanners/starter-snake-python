@@ -67,7 +67,6 @@ class Battlesnake(object):
         your_health = data["you"]["health"]
         your_body = data["you"]["body"]
         snakes = data["board"]["snakes"]
-        hazards = data["board"]["hazards"]
         print(f"Data in move is: {data}")
 
         while global_variables.GAME_ON and your_health > 0:
@@ -100,4 +99,5 @@ if __name__ == "__main__":
     )
     print("Entering the server of Snakes...")
     cherrypy.quickstart(server)
+
 
