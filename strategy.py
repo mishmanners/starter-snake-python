@@ -69,11 +69,11 @@ def avoid_snakes(future_head, snake_bodies):
     return True
 
 # def avoid_hazards(future_head, data):
-    """
-    Return True if the proposed future_head avoids a hazard, False if it means
-    you will hit a hazard.
+  #  """
+#    Return True if the proposed future_head avoids a hazard, False if it means
+ #   you will hit a hazard.
     
-    """
+  #  """
    # result = True
 
     # Get the list of hazards
