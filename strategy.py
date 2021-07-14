@@ -81,7 +81,7 @@ def avoid_hazards(future_head, data):
     # If the future head is in a hazard, return False to mean you'll hit a hazard next turn.
     if future_head in hazards:
         result = False
-    return True
+    return result
 
 def validate_move(your_body, snakes, next_move):
     """
