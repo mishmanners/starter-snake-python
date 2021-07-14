@@ -68,21 +68,21 @@ def avoid_snakes(future_head, snake_bodies):
             return False
     return True
 
-def avoid_hazards(future_head, data):
+# def avoid_hazards(future_head, data):
     """
     Return True if the proposed future_head avoids a hazard, False if it means
     you will hit a hazard.
     
     """
-    result = True
+   # result = True
 
     # Get the list of hazards
-    hazards = data["board"]["hazard"]
+   # hazards = data["board"]["hazard"]
 
     # If the future head is in a hazard square, return False to mean you'll hit a hazard next turn.
-    if future_head in hazards:
-        return False
-    return True
+  #  if future_head in hazards:
+   #     return False
+  #  return True
 
 
 def validate_move(your_body, snakes, next_move):
