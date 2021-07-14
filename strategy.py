@@ -54,7 +54,7 @@ def avoid_snakes(future_head, snake_bodies):
 
     TODO - and on that note, what about anticipating another snakes head, and
     if you are destined to occupy the same square another snake is about to?
-    That might be logic for somwhere else - I'll have to think about that.
+    That might be logic for somewhere else - I'll have to think about that.
 
     @:param: snake_bodies list of dictionary of snake bodies
 
