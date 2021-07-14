@@ -153,7 +153,6 @@ def choose_move_food(data):
 
 
 
-
     
 
 
