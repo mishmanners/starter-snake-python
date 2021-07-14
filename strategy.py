@@ -134,6 +134,7 @@ def choose_move_food(data):
         closest_food_x = food_squares[0]["x"]
         closest_food_y = food_squares[0]["y"]
 
+        # move to food
         if closest_food_x < current_head_x:
             move = "left"
         elif closest_food_x > current_head_x:
