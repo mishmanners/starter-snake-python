@@ -129,6 +129,7 @@ def choose_move_food(data):
     # print(f"Current head is at {current_head_x}, {current_head_y}")
     # print(f"Food squares are as follows: {food_squares}")
 
+    # added len(food_squares) > 0 to show food is on the board.
     if int(current_health) < 30 and len(food_squares) > 0:
         # Find the closest food square
         closest_food_x = food_squares[0]["x"]
