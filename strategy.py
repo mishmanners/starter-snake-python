@@ -17,10 +17,10 @@ def _predict_future_position(current_head, next_move):
 
     if next_move in ["left", "right"]:
         # moving left means decreasing x by 1, right increase by 1
-        future_head["x"] = current_head["x"] + var.MOVE_LOOKUP[next_move]
+        future_head.x = current_head.x + var.MOVE_LOOKUP[next_move]
     elif next_move in ["up", "down"]:
         # moving up means increasing y by 1, down decrease by 1
-        future_head["y"] = current_head["y"] + var.MOVE_LOOKUP[next_move]
+        future_head.y = current_head.y + var.MOVE_LOOKUP[next_move]
     return future_head
 
 
@@ -31,13 +31,12 @@ def avoid_wall(future_head):
     """
     result = True
 
-    x = int(future_head["x"])
-    y = int(future_head["y"])
+    x = int(future_head.x)
+    y = int(future_head.y)
 
     if x < 0 or y < 0 or x > var.BOARD_MAXIMUM_X or y > var.BOARD_MAXIMUM_Y:
         result = False
     return result
-
 
 def avoid_snakes(future_head, snake_bodies):
     """
@@ -50,10 +49,6 @@ def avoid_snakes(future_head, snake_bodies):
     safe place to move into (assuming no food as in above scenario). In which
     case, this logic needs to be modified to exclude the tail, as that is a safe
     square to move into.
-
-    TODO - and on that note, what about anticipating another snakes head, and
-    if you are destined to occupy the same square another snake is about to?
-    That might be logic for somewhere else - I'll have to think about that.
 
     @:param: snake_bodies list of dictionary of snake bodies
 
@@ -101,7 +96,6 @@ def validate_move(your_body, snakes, next_move):
 
     return is_safe
 
-
 def choose_move_chaos(data):
     """
     The chaos strategy relies on randomly choosing a next move, any move, to
@@ -131,9 +125,8 @@ def choose_move_food(data):
     # added len(food_squares) > 0 to show food is on the board.
     if int(current_health) < 40 and len(food_squares) > 0:
         # Find the closest food square
-        closest_food_x = food_squares[0]["x"]
-        closest_food_y = food_squares[0]["y"]
-
+        closest_food_x = food_squares[0].x
+        closest_food_y = food_squares[0].y  
         # move to food
         if closest_food_x < current_head_x:
             move = "left"
