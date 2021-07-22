@@ -72,7 +72,7 @@ def predict_future_position_others(current_head, snakes):
 
     # snakes includes us in the list, so we need to filter us out before we get the list.
 
-    enemies = [snake for snake in snakes if snake["id"] != current_head["id"]]
+    enemies = [snake for snake in snakes if not snake["you"]]
 
     for snake in enemies:
         this_snake_head = snake["head"]
