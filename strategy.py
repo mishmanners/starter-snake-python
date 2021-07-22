@@ -95,6 +95,7 @@ def predict_future_position_others(current_head_others, current_head, snakes):
         future_head_others.append(potential_head)
         
     return future_head_others
+    print(f"Future head of others {future_head_others}")
   
 def avoid_hazards(future_head, data):
     """
@@ -120,14 +121,14 @@ def validate_move(your_body, snakes, next_move, current_head_others):
     """
     current_head = your_body[0]
     future_head = predict_future_position(current_head, next_move)
-    # print(f"Future head on a {next_move} is as follows: {future_head}")
+    print(f"Future head on a {next_move} is as follows: {future_head}")
 
     safe_wall = avoid_wall(future_head)
     safe_body = avoid_snakes(future_head, snakes)
     # safe_hazards = avoid_hazards(future_head)
     safe_others = future_head not in predict_future_position_others(current_head_others, current_head, snakes)
     
-    # print(f"future_head {future_head}: safe_wall {safe_wall}, safe_body {safe_body}")
+    print(f"future_head {future_head}: safe_wall {safe_wall}, safe_body {safe_body}")
     is_safe = safe_wall and safe_body and safe_others
 
     return is_safe
