@@ -92,12 +92,6 @@ def predict_future_position_others(current_head_others, snakes):
         
     return future_head_others
   
-    #If the future head of my snake is in one of the potential snake heads above, avoid it!# If the future head is in a hazard, return False to mean you'll hit a hazard next turn.
-    if future_head in future_head_others:
-        result = False
-    return result
-
-
 def avoid_hazards(future_head, data):
     """
     Return True if the proposed future_head avoids the hazards, False if it means
@@ -113,7 +107,7 @@ def avoid_hazards(future_head, data):
         result = False
     return result
 
-def validate_move(your_body, snakes, next_move):
+def validate_move(your_body, snakes, next_move, current_head_others):
     """
     Basic set of logical checks that only prevent disaster. This function is not
     responsible for picking a move, it is responsible for saying if that move
@@ -124,16 +118,13 @@ def validate_move(your_body, snakes, next_move):
     future_head = predict_future_position(current_head, next_move)
     # print(f"Future head on a {next_move} is as follows: {future_head}")
 
-    current_head_others = [snake["head"] for snake in snakes]
-    future_head_others = predict_future_position_others(current_head_others)
-    
     safe_wall = avoid_wall(future_head)
     safe_body = avoid_snakes(future_head, snakes)
     safe_hazards = avoid_hazards(future_head)
-    # safe_others = 
+    safe_others = future_head not in predict_future_position_others(current_head_others, snakes)
     
     # print(f"future_head {future_head}: safe_wall {safe_wall}, safe_body {safe_body}")
-    is_safe = safe_wall and safe_body
+    is_safe = safe_wall and safe_body and safe_hazards and safe_others
 
     return is_safe
 
