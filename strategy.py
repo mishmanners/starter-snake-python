@@ -62,7 +62,7 @@ def avoid_snakes(future_head, snake_bodies):
             return False
     return True
 
-def predict_future_position_others(current_head_others):
+def predict_future_position_others(current_head_others, snakes):
     """
     Given the other snakes in the game, predict what the future position of
     the other snake head will be.
@@ -72,15 +72,31 @@ def predict_future_position_others(current_head_others):
 
     for snake in snakes:
         this_snake_head = snake["head"]
-        if next_move in ["left", "right", "up", "down"]:
-            # moving left means decreasing x by 1, right increase by 1
-            # left [x-1,y], right [x+1,y], down [x, y-1] and up [x, y+1]
-            future_head_others["x"] = current_head_others["x"]
-        elif next_move in ["up", "down"]:
-            # moving up means increasing y by 1, down decrease by 1
-            future_head_others["y"] = current_head_others["y"]  
-        return future_head_others
+        # left [x-1,y], right [x+1,y], down [x, y-1] and up [x, y+1]
+        
+        # if the snake goes left, it will be at x-1, y
+        potential_head = {"x": this_snake_head["x"] - 1, "y": this_snake_head["y"]}
+        future_head_others.append(potential_head)
+        
+        # if the snake goes right, it will be at x+1, y
+        potential_head = {"x": this_snake_head["x"] + 1, "y": this_snake_head["y"]}
+        future_head_others.append(potential_head)
+        
+        # if the snake goes down, it will be at x, y-1
+        potential_head = {"x": this_snake_head["x"], "y": this_snake_head["y"] - 1}
+        future_head_others.append(potential_head)
+        
+        # if the snake goes up, it will be at x, y+1
+        potential_head = {"x": this_snake_head["x"], "y": this_snake_head["y"] + 1}
+        future_head_others.append(potential_head)
+        
+    return future_head_others
   
+    #If the future head of my snake is in one of the potential snake heads above, avoid it!# If the future head is in a hazard, return False to mean you'll hit a hazard next turn.
+    if future_head in future_head_others:
+        result = False
+    return result
+
 
 def avoid_hazards(future_head, data):
     """
