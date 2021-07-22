@@ -62,7 +62,7 @@ def avoid_snakes(future_head, snake_bodies):
             return False
     return True
 
-def predict_future_position_others(current_head_others, snakes):
+def predict_future_position_others(current_head_others, current_head, snakes):
     """
     Given the other snakes in the game, predict what the future position of
     the other snake head will be.
@@ -70,7 +70,11 @@ def predict_future_position_others(current_head_others, snakes):
     # Empty list so we can fill it with possible moves.
     future_head_others = []
 
-    for snake in snakes:
+    # snakes includes us in the list, so we need to filter us out before we get the list.
+
+    enemies = [snake for snake in snakes if snake["id"] != current_head["id"]]
+
+    for snake in enemies:
         this_snake_head = snake["head"]
         # left [x-1,y], right [x+1,y], down [x, y-1] and up [x, y+1]
         
@@ -121,7 +125,7 @@ def validate_move(your_body, snakes, next_move, current_head_others):
     safe_wall = avoid_wall(future_head)
     safe_body = avoid_snakes(future_head, snakes)
     # safe_hazards = avoid_hazards(future_head)
-    safe_others = future_head not in predict_future_position_others(current_head_others, snakes)
+    safe_others = future_head not in predict_future_position_others(current_head_others, current_head, snakes)
     
     # print(f"future_head {future_head}: safe_wall {safe_wall}, safe_body {safe_body}")
     is_safe = safe_wall and safe_body and safe_others
