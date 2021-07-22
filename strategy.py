@@ -120,11 +120,11 @@ def validate_move(your_body, snakes, next_move, current_head_others):
 
     safe_wall = avoid_wall(future_head)
     safe_body = avoid_snakes(future_head, snakes)
-    safe_hazards = avoid_hazards(future_head)
+    # safe_hazards = avoid_hazards(future_head)
     safe_others = future_head not in predict_future_position_others(current_head_others, snakes)
     
     # print(f"future_head {future_head}: safe_wall {safe_wall}, safe_body {safe_body}")
-    is_safe = safe_wall and safe_body and safe_hazards and safe_others
+    is_safe = safe_wall and safe_body and safe_others
 
     return is_safe
 
