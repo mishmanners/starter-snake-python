@@ -87,7 +87,7 @@ class Battlesnake(object):
 
         global_variables.GAME_ON = False
 
-        print("Yay we finished the game! Did we win?")
+        print("Yay we finished the game! Did we win? We totally won right?")
         return "ok"
 
 
