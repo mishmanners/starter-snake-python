@@ -49,8 +49,7 @@ def avoid_snakes(future_head, snake_bodies):
     TODO - what about snake tails leaving in the next move? A tail may be a
     safe place to move into (assuming no food as in above scenario). In which
     case, this logic needs to be modified to exclude the tail, as that is a safe
-    square to move into. LOOK INTO THIS LATER when implementing chicken snake
-    approach, as that is a key concept with that!
+    square to move into.
 
     TODO - and on that note, what about anticipating another snakes head, and
     if you are destined to occupy the same square another snake is about to?
@@ -130,7 +129,7 @@ def choose_move_food(data):
     # print(f"Food squares are as follows: {food_squares}")
 
     # added len(food_squares) > 0 to show food is on the board.
-    if int(current_health) < 30 and len(food_squares) > 0:
+    if int(current_health) < 40 and len(food_squares) > 0:
         # Find the closest food square
         closest_food_x = food_squares[0]["x"]
         closest_food_y = food_squares[0]["y"]
