@@ -7,7 +7,7 @@ import random
 import global_variables as var
 
 
-def _predict_future_position(current_head, next_move):
+def predict_future_position(current_head, next_move):
     """
     Given the current snake head position, and a proposed move,
     returns what the new snake head position would be.
@@ -62,6 +62,23 @@ def avoid_snakes(future_head, snake_bodies):
             return False
     return True
 
+def predict_future_position_others(current_head_others, next_move):
+    """
+    Given the other snakes in the game, predict what the future position of
+    the other snake head will be.
+    """
+    # Get a clean copy, otherwise will modify the current head!
+    future_head_others = current_head_others.copy()
+
+    if next_move in ["left", "right"]:
+        # moving left means decreasing x by 1, right increase by 1
+        future_head_others["x"] = current_head_others["x"] + var.MOVE_LOOKUP[next_move]
+    elif next_move in ["up", "down"]:
+        # moving up means increasing y by 1, down decrease by 1
+        future_head_others["y"] = current_head_others["y"] + var.MOVE_LOOKUP[next_move]  
+    return future_head_others
+    
+
 def avoid_hazards(future_head, data):
     """
     Return True if the proposed future_head avoids the hazards, False if it means
@@ -85,11 +102,13 @@ def validate_move(your_body, snakes, next_move):
     Return True if safe, False if not (and another move is needed).
     """
     current_head = your_body[0]
-    future_head = _predict_future_position(current_head, next_move)
+    future_head = predict_future_position(current_head, next_move)
     print(f"Future head on a {next_move} is as follows: {future_head}")
 
     safe_wall = avoid_wall(future_head)
     safe_body = avoid_snakes(future_head, snakes)
+    safe_hazards = avoid_hazards(future_head)
+    # safe_others = 
     
     print(f"future_head {future_head}: safe_wall {safe_wall}, safe_body {safe_body}")
     is_safe = safe_wall and safe_body
