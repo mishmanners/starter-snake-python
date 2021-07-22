@@ -17,10 +17,10 @@ def _predict_future_position(current_head, next_move):
 
     if next_move in ["left", "right"]:
         # moving left means decreasing x by 1, right increase by 1
-        future_head.x = current_head.x + var.MOVE_LOOKUP[next_move]
+        future_head["x"] = current_head["x"] + var.MOVE_LOOKUP[next_move]
     elif next_move in ["up", "down"]:
         # moving up means increasing y by 1, down decrease by 1
-        future_head.y = current_head.y + var.MOVE_LOOKUP[next_move]
+        future_head["y"] = current_head["y"] + var.MOVE_LOOKUP[next_move]
     return future_head
 
 
@@ -31,8 +31,8 @@ def avoid_wall(future_head):
     """
     result = True
 
-    x = int(future_head.x)
-    y = int(future_head.y)
+    x = int(future_head["x"])
+    y = int(future_head["y"])
 
     if x < 0 or y < 0 or x > var.BOARD_MAXIMUM_X or y > var.BOARD_MAXIMUM_Y:
         result = False
@@ -125,8 +125,9 @@ def choose_move_food(data):
     # added len(food_squares) > 0 to show food is on the board.
     if int(current_health) < 40 and len(food_squares) > 0:
         # Find the closest food square
-        closest_food_x = food_squares[0].x
-        closest_food_y = food_squares[0].y  
+        closest_food_x = food_squares[0]["x"]
+        closest_food_y = food_squares[0]["y"]
+
         # move to food
         if closest_food_x < current_head_x:
             move = "left"
