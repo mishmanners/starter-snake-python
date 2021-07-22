@@ -67,13 +67,14 @@ def predict_future_position_others(current_head_others):
     Given the other snakes in the game, predict what the future position of
     the other snake head will be.
     """
-    # Get a clean copy, otherwise will modify the current head!
-    future_head_others = current_head_others.copy()
+    # Empty list so we can fill it with possible moves.
+    future_head_others = []
 
     for snake in snakes:
         this_snake_head = snake["head"]
         if next_move in ["left", "right", "up", "down"]:
             # moving left means decreasing x by 1, right increase by 1
+            # left [x-1,y], right [x+1,y], down [x, y-1] and up [x, y+1]
             future_head_others["x"] = current_head_others["x"]
         elif next_move in ["up", "down"]:
             # moving up means increasing y by 1, down decrease by 1
