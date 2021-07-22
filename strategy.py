@@ -62,7 +62,7 @@ def avoid_snakes(future_head, snake_bodies):
             return False
     return True
 
-def predict_future_position_others(current_head_others, current_head, snakes):
+def predict_future_position_others(current_head, snakes):
     """
     Given the other snakes in the game, predict what the future position of
     the other snake head will be.
