@@ -62,7 +62,7 @@ def avoid_snakes(future_head, snake_bodies):
             return False
     return True
 
-def predict_future_position_others(current_head_others, next_move):
+def predict_future_position_others(current_head_others):
     """
     Given the other snakes in the game, predict what the future position of
     the other snake head will be.
@@ -70,14 +70,16 @@ def predict_future_position_others(current_head_others, next_move):
     # Get a clean copy, otherwise will modify the current head!
     future_head_others = current_head_others.copy()
 
-    if next_move in ["left", "right"]:
-        # moving left means decreasing x by 1, right increase by 1
-        future_head_others["x"] = current_head_others["x"] + var.MOVE_LOOKUP[next_move]
-    elif next_move in ["up", "down"]:
-        # moving up means increasing y by 1, down decrease by 1
-        future_head_others["y"] = current_head_others["y"] + var.MOVE_LOOKUP[next_move]  
-    return future_head_others
-    
+    for snake in snakes:
+        this_snake_head = snake["head"]
+        if next_move in ["left", "right", "up", "down"]:
+            # moving left means decreasing x by 1, right increase by 1
+            future_head_others["x"] = current_head_others["x"]
+        elif next_move in ["up", "down"]:
+            # moving up means increasing y by 1, down decrease by 1
+            future_head_others["y"] = current_head_others["y"]  
+        return future_head_others
+  
 
 def avoid_hazards(future_head, data):
     """
@@ -103,14 +105,17 @@ def validate_move(your_body, snakes, next_move):
     """
     current_head = your_body[0]
     future_head = predict_future_position(current_head, next_move)
-    print(f"Future head on a {next_move} is as follows: {future_head}")
+    # print(f"Future head on a {next_move} is as follows: {future_head}")
 
+    current_head_others = [snake["head"] for snake in snakes]
+    future_head_others = predict_future_position_others(current_head_others)
+    
     safe_wall = avoid_wall(future_head)
     safe_body = avoid_snakes(future_head, snakes)
     safe_hazards = avoid_hazards(future_head)
     # safe_others = 
     
-    print(f"future_head {future_head}: safe_wall {safe_wall}, safe_body {safe_body}")
+    # print(f"future_head {future_head}: safe_wall {safe_wall}, safe_body {safe_body}")
     is_safe = safe_wall and safe_body
 
     return is_safe
