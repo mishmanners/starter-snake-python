@@ -112,7 +112,7 @@ def avoid_hazards(future_head, data):
         result = False
     return result
 
-def validate_move(your_body, snakes, next_move, current_head_others):
+def validate_move(your_body, snakes, next_move):
     """
     Basic set of logical checks that only prevent disaster. This function is not
     responsible for picking a move, it is responsible for saying if that move
@@ -126,7 +126,7 @@ def validate_move(your_body, snakes, next_move, current_head_others):
     safe_wall = avoid_wall(future_head)
     safe_body = avoid_snakes(future_head, snakes)
     # safe_hazards = avoid_hazards(future_head)
-    safe_others = future_head not in predict_future_position_others(current_head_others, current_head, snakes)
+    safe_others = future_head not in predict_future_position_others(current_head, snakes)
     
     print(f"future_head {future_head}: safe_wall {safe_wall}, safe_body {safe_body}")
     is_safe = safe_wall and safe_body and safe_others
