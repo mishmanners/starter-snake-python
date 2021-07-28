@@ -6,7 +6,7 @@ import global_variables
 import strategy
 
 """
-This is a simple Battlesnake server written in Python.
+Python starter snake from Battlesnake team.
 For instructions see https://github.com/BattlesnakeOfficial/starter-snake-python/README.md
 """
 
