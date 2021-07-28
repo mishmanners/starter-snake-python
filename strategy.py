@@ -71,7 +71,7 @@ def predict_future_position_others(snakes):
     future_head_others = []
 
     """The list of others includes us, so we need to filter out "you" before parsing the list"""
-    enemies = [snake for snake in snakes if snake["id"] != var.SELF_ID]
+    enemies = [snake for snake in snakes if snake["id"] != var.you["id"]]
     #  snakes includes us in the list, so we need to filter us out before we get the list.
     # enemies = [snake for snake in snakes if not snake["you"]]
 
