@@ -35,7 +35,7 @@ class Battlesnake(object):
         
         """
         Treat this as game initialization - should only set global_variables
-        here - could be dangerous elsewhere! Don't want to confuse myself.
+        here.
 
         { "game":  { "id":  "unique-game-id", "timeout" : 500 }
           "turn": 123
