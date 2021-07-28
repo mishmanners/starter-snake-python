@@ -99,7 +99,7 @@ def predict_future_position_others(snakes, your_body):
         future_head_others.append(potential_head)
         
     return future_head_others
-    print(f"Future head of others {future_head_others}")
+    # print(f"Future head of others {future_head_others}")
   
 def avoid_hazards(future_head, data):
     """
