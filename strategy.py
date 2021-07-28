@@ -125,7 +125,7 @@ def validate_move(your_body, snakes, next_move):
 
     safe_wall = avoid_wall(future_head)
     safe_body = avoid_snakes(future_head, snakes)
-    # TODO: avoid other snakes' future heads.
+    # TODO: avoid other snakes' future heads. Function to check other snakes' potential moves is built above.
     # safe_others = future_head not in predict_future_position_others(snakes, your_body)
     
     # TODO: add avoid_hazards and predict_future_position_others to the list of checks.
