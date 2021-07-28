@@ -67,19 +67,15 @@ def predict_future_position_others(snakes, your_body):
     Given the other snakes in the game, predict what the future position of
     the other snake head will be.
     """
-    # Empty list so we can fill it with possible moves.
+    # Empty list so we can fill it with possible moves of where the other snakes' heads could be.
     future_head_others = []
 
     """The list of others includes us, so we need to filter out "you" before parsing the list"""
     enemies = [snake for snake in snakes if snake != your_body]
-    
-    # enemies = [snake for snake in snakes if snake != snake[your_body]]
-
     #  Now we have a list of all the other snakes in the game, minus us.
 
-
-    for snake in enemies:
-        this_snake_head = snake["head"]
+    for enemy in enemies:
+        this_snake_head = enemy["head"]
         # left [x-1,y], right [x+1,y], down [x, y-1] and up [x, y+1]
         
         # if the snake goes left, it will be at x-1, y
@@ -99,7 +95,7 @@ def predict_future_position_others(snakes, your_body):
         future_head_others.append(potential_head)
         
     return future_head_others
-    # print(f"Future head of others {future_head_others}")
+    # print(f"Future head of others could be in these positions: {future_head_others}")
   
 def avoid_hazards(future_head, data):
     """
