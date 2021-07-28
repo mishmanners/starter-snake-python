@@ -62,7 +62,7 @@ def avoid_snakes(future_head, snake_bodies):
             return False
     return True
 
-def predict_future_position_others(current_head, snakes):
+def predict_future_position_others(snakes):
     """
     Given the other snakes in the game, predict what the future position of
     the other snake head will be.
@@ -70,9 +70,10 @@ def predict_future_position_others(current_head, snakes):
     # Empty list so we can fill it with possible moves.
     future_head_others = []
 
-    # snakes includes us in the list, so we need to filter us out before we get the list.
-
-    enemies = [snake for snake in snakes if not snake["you"]]
+    """The list of others includes us, so we need to filter out "you" before parsing the list"""
+    enemies = [snake for snake in snakes if snake["id"] != var.SELF_ID]
+    #  snakes includes us in the list, so we need to filter us out before we get the list.
+    # enemies = [snake for snake in snakes if not snake["you"]]
 
     for snake in enemies:
         this_snake_head = snake["head"]
