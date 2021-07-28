@@ -65,7 +65,7 @@ def avoid_snakes(future_head, snake_bodies):
 def predict_future_position_others(snakes, your_body):
     """
     Given the other snakes in the game, predict what the future position of
-    the other snake head will be.
+    the other snakes' heads will be, then don't go in those positions.
     """
     # Empty list so we can fill it with possible moves of where the other snakes' heads could be.
     future_head_others = []
