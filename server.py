@@ -10,7 +10,7 @@ This is a simple Battlesnake server written in Python.
 For instructions see https://github.com/BattlesnakeOfficial/starter-snake-python/README.md
 """
 
-# Code for the Sneki Snek Battlesnake
+# Code for the Sneki Snek Battlesnake.
 
 class Battlesnake(object):
     @cherrypy.expose
