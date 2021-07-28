@@ -72,8 +72,11 @@ def predict_future_position_others(snakes, your_body):
 
     """The list of others includes us, so we need to filter out "you" before parsing the list"""
     enemies = [snake for snake in snakes if snake != your_body]
-    #  snakes includes us in the list, so we need to filter us out before we get the list.
-    # enemies = [snake for snake in snakes if not snake["you"]]
+    
+    # enemies = [snake for snake in snakes if snake != snake[your_body]]
+
+    #  Now we have a list of all the other snakes in the game, minus us.
+
 
     for snake in enemies:
         this_snake_head = snake["head"]
@@ -126,7 +129,7 @@ def validate_move(your_body, snakes, next_move):
 
     safe_wall = avoid_wall(future_head)
     safe_body = avoid_snakes(future_head, snakes)
-    safe_others = future_head not in predict_future_position_others(snakes)
+    safe_others = future_head not in predict_future_position_others(snakes, your_body)
     
     # TODO: add avoid_hazards and predict_future_position_others to the list of checks.
     # safe_hazards = avoid_hazards(future_head)
