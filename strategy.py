@@ -120,20 +120,18 @@ def validate_move(your_body, snakes, next_move):
     Return True if safe, False if not (and another move is needed).
     """
     current_head = your_body[0]
-    future_head = predict_future_position(current_head, next_move)
+    future_head = predict_future_position(current_head, next_move, snakes)
     print(f"Future head on a {next_move} is as follows: {future_head}")
 
     safe_wall = avoid_wall(future_head)
     safe_body = avoid_snakes(future_head, snakes)
-    safe_hazards = avoid_hazards(future_head)
+    safe_others = future_head not in predict_future_position_others(current_head, snakes)
+    # safe_hazards = avoid_hazards(future_head)
 
     # TODO: add avoid_hazards and predict_future_position_others to the list of checks.
-
     
-    # safe_others = future_head not in predict_future_position_others(current_head, snakes)
-    
-    print(f"future_head {future_head}: safe_wall {safe_wall}, safe_body {safe_body}, safe_hazards {safe_hazards}")
-    is_safe = safe_wall and safe_body and safe_hazards
+    print(f"future_head {future_head}: safe_wall {safe_wall}, safe_body {safe_body}, safe_others {safe_others}")
+    is_safe = safe_wall and safe_body and safe_others
 
     return is_safe
 
