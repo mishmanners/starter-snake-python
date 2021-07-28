@@ -70,8 +70,8 @@ class Battlesnake(object):
         print(f"Data in move is: {data}")
 
         while global_variables.GAME_ON and your_health > 0:
-            safe = strategy.validate_move(your_body, snakes, move)
             move = strategy.choose_move_food(data)
+            safe = strategy.validate_move(your_body, snakes, move)
             if safe:
                 break
 
