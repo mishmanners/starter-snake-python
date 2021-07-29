@@ -9,7 +9,7 @@ import global_variables as var
 
 def predict_future_position(current_head, next_move):
     """
-    Given the current snake head position, and a proposed move,
+    Given the current position of my snake's head, and a proposed move,
     returns what the new snake head position would be.
     """
     # Get a clean copy, otherwise will modify the current head!
