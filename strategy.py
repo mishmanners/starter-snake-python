@@ -71,7 +71,10 @@ def predict_future_position_others(snakes, your_body):
     future_head_others = []
 
     """The list of others includes us, so we need to filter out "you" before parsing the list"""
-    enemies = [snake for snake in snakes if snake != your_body]
+    enemies = [enemy for enemy in snakes if snakes["id"] != your_body["id"]]
+    print("Enemies: {}".format(enemies))
+
+    # enemies = [snake for snake in snakes if snake != your_body]
     #  Now we have a list of all the other snakes in the game, minus us.
 
     for enemy in enemies:
