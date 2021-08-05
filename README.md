@@ -8,8 +8,6 @@ Right now, I'm playing [Battlesnake](https://play.battlesnake.com/u/mishmanners/
 
 <a href="https://play.battlesnake.com" target="blank"><img align="" src="https://github.com/mishmanners/MishManners/blob/master/Images/Wordmark.png" width="300" /></a>
 
-<img src="https://github.com/mishmanners/starter-snake-python/blob/master/68747470733a2f2f6d656469612e626174746c65736e616b652e636f6d2f736f6369616c2f476974487562536f6369616c2e706e67.png" alt="Battlesnake Logo" data-canonical-src="https://media.battlesnake.com/social/GitHubSocial.png" style="max-width:100%;">
-
 This is a basic implementation of the [Battlesnake API](https://docs.battlesnake.com/references/api). It's a great starting point for anyone wanting to program their first Battlesnake using Python. It comes ready to use with [Repl.it](https://repl.it) and provides instructions below for getting started. It can also be deployed to [Heroku](https://heroku.com), or any other cloud provider you'd like.
 
 ### Technologies Used
