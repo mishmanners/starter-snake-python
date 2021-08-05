@@ -50,7 +50,6 @@ This means your Battlesnake is running correctly on Repl.it.
 **At this point your Battlesnake is live and ready to enter games!**
 
 
-
 ## Registering Your Battlesnake and Creating Your First Game
 
 1. Sign in to [play.battlesnake.com](https://play.battlesnake.com/login/).
