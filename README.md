@@ -15,7 +15,6 @@ This is a basic implementation of the [Battlesnake API](https://docs.battlesnake
 * [Python3](https://www.python.org/)
 * [CherryPy](https://cherrypy.org/)
 
-
 ## Prerequisites
 
 * [Battlesnake Account](https://play.battlesnake.com) <!-- done !-->
@@ -49,6 +48,7 @@ This means your Battlesnake is running correctly on Repl.it.
 
 **At this point your Battlesnake is live and ready to enter games!**
 
+We used Replit to run this Sneki Snek. However, considering changing it for next season due to timeouts and latency issues.
 
 
 ## Registering Your Battlesnake and Creating Your First Game
