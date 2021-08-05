@@ -63,8 +63,6 @@ Repeat steps 3 and 4 every time you want to see how your Battlesnake behaves. It
 
 **At this point you should have a registered Battlesnake and be able to create games!**
 
-
-
 ## Customizing Your Battlesnake
 
 Now you're ready to start customizing your Battlesnake's appearance and behavior.
