@@ -121,25 +121,22 @@ Once you have completed these steps you'll be ready to compete live against othe
 
 * When viewing a Battlesnake game you can pause playback and step forward/backward one frame at a time. If you review your logs at the same time, you can see what decision your Battlesnake made on each turn.
 
-
-
 ## Joining a Battlesnake Arena
 
 Once you've made your Battlesnake behave and survive on its own, you can enter it into the [Global Battlesnake Arena](https://play.battlesnake.com/arena/global) to see how it performs against other Battlesnakes worldwide.
 
 Arenas will regularly create new games and rank Battlesnakes based on their results. They're a good way to get regular feedback on how well your Battlesnake is performing, and a fun way to track your progress as you develop your algorithm.
 
-
-
-## (Optional) Using a Cloud Provider
+## TODO (Optional) Using a Cloud Provider
 
 As your Battlesnake gets more complex, it might make sense to move it to a dedicated hosting provider such as Heroku or AWS. We suggest choosing a platform you're familiar with, or one you'd be interested in learning more about.
 
 If you have questions or ideas, our developer community on [Slack](https://play.battlesnake.com/slack) and [Discord](https://play.battlesnake.com/discord) will be able to help out.
 
 
-
 ## (Optional) Running Your Battlesnake Locally
+
+Can run Battlesnake locally, but I wouldn't trust Australian internet! :wink:
 
 Eventually you might want to run your Battlesnake server locally for faster testing and debugging. You can do this by installing [Python 3.8](https://www.python.org/downloads/) and running:
 
@@ -152,8 +149,7 @@ python server.py
 
 ---
 
-
-### Questions?
+### Re
 
 All documentation is available at [docs.battlesnake.com](https://docs.battlesnake.com), including detailed Guides, API References, and Tips.
 
