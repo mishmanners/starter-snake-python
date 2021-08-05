@@ -50,27 +50,17 @@ This means your Battlesnake is running correctly on Repl.it.
 
 We used Replit to run this Sneki Snek. However, considering changing it for next season due to timeouts and latency issues.
 
-## Registering Your Battlesnake and Creating Your First Game
-
-1. Sign in to [play.battlesnake.com](https://play.battlesnake.com/login/).
-
-2. Go [here to create a new Battlesnake](https://play.battlesnake.com/account/snakes/create/). Give it a meaningful name and complete the form using the URL for your Repl from above.
-
-3. Once your Battlesnake has been saved you can [create a new game](https://play.battlesnake.com/account/games/create/) and add your Battlesnake to it. Type your Battlesnake's name into the search field and click "Add" to add it to the game. Then click "Create Game" to start the game.
-
-4. You should see a brand new Battlesnake game with your Battlesnake in it! Yay! Press "Play" to start the game and watch how your Battlesnake behaves. By default your Battlesnake should move randomly around the board.
-
-5. Optionally, watch your Repl logs while the game is running to see your Battlesnake receiving API calls and responding with its moves.
-
-Repeat steps 3 and 4 every time you want to see how your Battlesnake behaves. It's common for Battlesnake developers to repeat these steps often as they make their Battlesnake smarter. You can also use the "Create Rematch" button to quickly start a new game using the same Battlesnakes and configuration.
+## Registering and battling
 
 **At this point you should have a registered Battlesnake and be able to create games!**
 
-## Customizing Your Battlesnake
+Sneki Snek has battled in:
+- Summer League 2021
 
-Now you're ready to start customizing your Battlesnake's appearance and behavior.
+Sneki Snek is currently battling in:
+- Global Arena
 
-### Changing Appearance
+### Customised Battle Snake
 
 Locate the `index` function inside [server.py](server.py#L15). At the end of that function you should see a line that looks like this:
 
@@ -83,6 +73,8 @@ return {
     "tail": "default",
 }
 ```
+
+Sneki Sneki is 
 
 This function is called by the game engine periodically to make sure your Battlesnake is healthy, responding correctly, and to determine how your Battlesnake will appear on the game board. See [Battlesnake Personalization](https://docs.battlesnake.com/references/personalization) for how to customize your Battlesnake's appearance using these values.
 
