@@ -10,3 +10,4 @@ Even though it's called "Summer", it's winter here in Australia. The Battlesnake
 
 Check out the final [stats and leaderboard for the League](https://play.battlesnake.com/league/summer-league-2021/)
 
+<a href="https://play.battlesnake.com/league/summer-league-2021/" target="blank"><img align="" src="https://github.com/mishmanners/starter-snake-python/blob/main/Leagues/Summer%20League%20stats.JPG" width="500" /></a>
