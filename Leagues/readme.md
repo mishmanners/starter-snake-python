@@ -18,3 +18,5 @@ Check out the final [stats and leaderboard for the League](https://play.battlesn
 **Sneki Snek** ended the Summer League place in Gold Ranking. He was just outside the top 100, possibly due to the Replit breaking. Note to self: remember to consistently check Replit account to ensure the server is online!
 
 Well done Sneki Snek :partying_face:
+
+<a href="https://play.battlesnake.com/u/mishmanners/sneki-snek/" target="blank"><img align="" src="https://github.com/mishmanners/starter-snake-python/blob/main/Leagues/Sneki%20Snek%20GOLD.JPG" width="700" /></a>
