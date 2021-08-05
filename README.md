@@ -74,7 +74,7 @@ return {
 }
 ```
 
-Sneki Sneki is 
+Sneki Sneki is red with a caffeine head and curly tail.
 
 This function is called by the game engine periodically to make sure your Battlesnake is healthy, responding correctly, and to determine how your Battlesnake will appear on the game board. See [Battlesnake Personalization](https://docs.battlesnake.com/references/personalization) for how to customize your Battlesnake's appearance using these values.
 
@@ -96,23 +96,20 @@ Once the Repl has restarted you can [create a new game](https://play.battlesnake
 
 **At this point you should feel comfortable making changes to your code and starting new Battlesnake games to test those changes!**
 
-
-
 ## Developing Your Battlesnake Further
 
 Now you have everything you need to start making your Battlesnake super smart!
 
 ### Early Development Goals
 
-Here are some simple goals to help you develop your Battlesnake early on. Completing these will make your Battlesnake competitive against other Battlesnakes in multi-player games.
+Here are some simple goals to help you develop your Battlesnake early on. Completing these will make your Battlesnake competitive against other Battlesnakes in multi-player games. Earn challenge medals for these:
 
-- [ ] Avoid colliding with walls
-- [ ] Avoid colliding with yourself
-- [ ] Try to move towards food
+- [x] Avoid colliding with walls
+- [x] Avoid colliding with yourself
+- [x] Try to move towards food
 - [ ] Avoid colliding with other snakes
 
 Once you have completed these steps you'll be ready to compete live against other Battlesnakes and start exploring and implementing more complex strategies.
-
 
 ### Helpful Tips
 
