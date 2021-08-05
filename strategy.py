@@ -62,7 +62,7 @@ def avoid_snakes(future_head, snake_bodies):
             return False
     return True
 
-def predict_future_position_others(snakes, your_body):
+def predict_future_position_others(snakes):
     """
     Given the other snakes in the game, predict what the future position of
     the other snakes' heads will be, then don't go in those positions.
@@ -187,9 +187,4 @@ def choose_move_food(data):
     else:
         # If no food is found, move randomly.
         return choose_move_chaos(data)
-
-
-
-    
-
 
