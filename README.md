@@ -25,6 +25,8 @@ This is a basic implementation of the [Battlesnake API](https://docs.battlesnake
 
 [![Run on Repl.it](https://repl.it/badge/github/BattlesnakeOfficial/starter-snake-python)](https://repl.it/github/BattlesnakeOfficial/starter-snake-python)
 
+Big note with Replit is to ensure you regularly check in on the server. If you don't, the server will go to sleep and your Battlesnake will not run. Learned this the hard way!
+
 1. Login to your [Repl.it](https://repl.it) account.
 
 2. Click the 'Run on Repl.it' button above, or visit the following URL: https://repl.it/github/BattlesnakeOfficial/starter-snake-python.
