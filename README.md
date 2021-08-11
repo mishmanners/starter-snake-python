@@ -52,6 +52,12 @@ This means your Battlesnake is running correctly on Repl.it.
 
 We used Replit to run this Sneki Snek. However, considering changing it for next season due to timeouts and latency issues.
 
+If you don't know what a Sneki Snek is (the name I gave to my Battlesnake), check out [Sneki Snek on the Razer website](https://www.razer.com/gear-accessories/razer-sneki-snek-plushie/).
+
+<a href="https://www.razer.com/gear-accessories/razer-sneki-snek-plushie/" target="blank"><img align="" src="https://github.com/mishmanners/starter-snake-python/blob/main/images/plushie.jpg" width="400" /></a>
+
+This adorable plushie has planted lots of trees! 🌳
+
 ## Registering and battling
 
 **At this point you should have a registered Battlesnake and be able to create games!**
