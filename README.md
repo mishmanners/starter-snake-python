@@ -6,7 +6,7 @@ This repo has been cloned from the [Official Battlesnake Starter-Snake](https://
 
 Right now, I'm playing [Battlesnake](https://play.battlesnake.com/u/mishmanners/) 🐍 [Fork the repo](https://github.com/orgs/BattlesnakeOfficial/repositories) (choose from Python, Go, or Java starter snakes), make your snake, and come play with us!
 
-If you are forking the repo, add "Battlesnake" to the tags and you'll appear on the [official Battlesnake tag](https://twitter.com/playbattlesnake/status/1470159791762796550). As of Dec 2021, there are over 1000 Battlesnake repos!
+If you are forking the repo, add "Battlesnake" to the tags and you'll appear on the [official Battlesnake tag](https://twitter.com/playbattlesnake/status/1470159791762796550). As of Dec 2021, there are over 1000 Battlesnake repos! 😲
 
 <a href="https://play.battlesnake.com" target="blank"><img align="" src="https://github.com/mishmanners/starter-snake-python/blob/main/images/68747470733a2f2f6d656469612e626174746c65736e616b652e636f6d2f736f6369616c2f476974487562536f6369616c2e706e67.png" width="400" /></a>
 
