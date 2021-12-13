@@ -8,7 +8,7 @@ Right now, I'm playing [Battlesnake](https://play.battlesnake.com/u/mishmanners/
 
 If you are forking the repo, add "Battlesnake" to the tags and you'll appear on the [official Battlesnake tag](https://twitter.com/playbattlesnake/status/1470159791762796550). As of Dec 2021, there are over 1000 Battlesnake repos! 😲
 
-<a href="https://play.battlesnake.com" target="blank"><img align="" src="https://github.com/mishmanners/starter-snake-python/blob/main/images/68747470733a2f2f6d656469612e626174746c65736e616b652e636f6d2f736f6369616c2f476974487562536f6369616c2e706e67.png" width="400" /></a>
+<a href="https://play.battlesnake.com" target="blank"><img align="" src="https://github.com/mishmanners/starter-snake-python/blob/main/images/68747470733a2f2f6d656469612e626174746c65736e616b652e636f6d2f736f6369616c2f476974487562536f6369616c2e706e67.png" width="500" /></a>
 
 This is a basic implementation of the [Battlesnake API](https://docs.battlesnake.com/references/api). It's a great starting point for anyone wanting to program their first Battlesnake using Python. It comes ready to use with [Repl.it](https://repl.it) and provides instructions below for getting started. It can also be deployed to [Heroku](https://heroku.com), or any other cloud provider you'd like.
 
